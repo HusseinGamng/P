@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>حسين للألعاب الإلكترونية</title>
+  <meta name="description" content="صفحة ترحيب – حسين للألعاب الإلكترونية" />
+
+  <style>
+    @keyframes emoji-rgb-glow {
+  0%   { filter: drop-shadow(0 0 6px red); }
+  25%  { filter: drop-shadow(0 0 6px orange); }
+  50%  { filter: drop-shadow(0 0 6px lime); }
+  75%  { filter: drop-shadow(0 0 6px cyan); }
+  100% { filter: drop-shadow(0 0 6px red); }
+}
+.rainbow-emoji {
+  display: inline-block;
+  animation: emoji-rgb-glow 2s infinite;
+}
+
+    :root {
+      --border: rgb(0, 195, 255);
+      --txt: #ffffff;
+    }
+.gini-btn {
+  position: relative;
+}
+
+.gini-btn .install-badge {
+  position: absolute;
+  top: -8px;
+  inset-inline-start: 50%;
+  transform: translateX(50%);
+  background-color: #ff0033;
+  color: #ebebeb;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid #f3050500;
+  box-shadow: 0 0 5px rgba(255, 0,ddd 0, 0);
+  line-height: 1;
+  white-space: nowrap;
+  z-index: 1;
+  
+}
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Tajawal", system-ui, -apple-system, Segoe UI, Roboto, Arial, "Baloo Bhaijaan 2", sans-serif;
+      color: var(--txt);
+      overflow: auto;
+      background: #ff010100 url('bg.png') center/cover fixed no-repeat;
+    }
+
+    .veil {
+      position: fixed; inset: 0; z-index: -1;
+      background: radial-gradient(900px 900px at 50% 50%, rgba(0,195,255,0.05), rgba(0,0,0,1));
+      backdrop-filter: blur(6px);
+    }
+
+    .wrap { min-height: 100%; display: grid; place-items: center; padding: 24px; }
+
+    .card {
+      position: relative; width: min(880px, 92vw);
+      padding: 48px 28px 32px; border-radius: 28px;
+      background: rgba(0,0,0,0.8);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(8px) saturate(1.2);
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,195,255,0.3);
+    }
+
+    .brand {
+  font-family: 'Noto Color Emoji', 'Baloo Bhaijaan 2', 'Tajawal', sans-serif;
+      font-size: clamp(32px, 6vw, 64px);
+      font-weight: 800; margin: 0 0 10px;
+      background: linear-gradient(90deg,#00e5ff,#00ffff,#00e5ff);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      text-shadow: 0 0 15px rgba(0,195,255,.6);
+    }
+
+    .sub { opacity: .9; margin: 0 0 24px; font-size: 18px; color: #dff7ff; }
+    .addr { margin: -4px 0 18px; font-size: 16px; opacity: .95; }
+    .addr a { color: #ff0000; text-decoration: none; border-bottom: 1px dotted #00bfff; }
+
+    /* التوهج على الصور */
+    .glow-icon {
+      filter: drop-shadow(0 0 6px rgba(0, 200, 255, 0.8));
+      transition: filter 0.3s ease-in-out;
+    }
+    .glow-icon:hover {
+      filter: drop-shadow(0 0 12px rgba(255, 100, 0, 0.95));
+    }
+
+    /* الأرقام */
+    .phones { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 18px 0 6px; }
+
+    .pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 12px 18px; border-radius: 999px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(0,195,255,.5);
+      font-size: 20px; font-weight: 700; letter-spacing: .5px;
+      color: #00c8ff; text-decoration: none;
+      transition: all .3s ease-in-out;
+      box-shadow: 0 0 10px rgba(0,195,255,.4), 0 0 25px rgba(0,235,255,.2);
+      animation: pulse2s 2s ease-in-out infinite;
+    }
+
+    .pill:hover {
+      box-shadow: 0 0 30px rgba(255,70,0,.8), 0 0 50px rgba(255,120,0,.5);
+      border-color: rgba(255,90,0,.9); color: #fff;
+    }
+
+    .pill img { width: 22px; height: 22px; border-radius: 50%; object-fit: contain; }
+
+    /* الأزرار */
+    .cta { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 18px; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 18px; border-radius: 14px;
+      border: 1px solid rgba(0,195,255,.5);
+      background: linear-gradient(180deg,rgba(0,60,80,0.5),rgba(0,0,0,0.8));
+      color: #00e5ff; text-decoration: none; font-weight: 700;
+      letter-spacing: .3px; transition: transform .15s ease, box-shadow .15s ease;
+      box-shadow: 0 0 10px rgba(0,195,255,.4), 0 0 25px rgba(0,235,255,.2);
+      animation: pulse2s 2s ease-in-out infinite;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(255,70,0,.8), 0 0 50px rgba(255,120,0,.5);
+      border-color: rgba(255,90,0,.9); color: #fff;
+    }
+
+    .btn .icon { width: 22px; height: 22px; display: inline-block; }
+    .btn .icon img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
+
+    /* زر  المنسدل */
+    .btn-menu { cursor: pointer; position: relative; }
+
+    .dropdown {
+      position: absolute; top: 110%; inset-inline-end: 0;
+      background: rgba(0,20,30,.95);
+      border: 1px solid var(--border);
+      border-radius: 12px; padding: 8px; min-width: 200px;
+      display: none; backdrop-filter: blur(6px);
+    }
+
+    .dropdown a {
+      display: block; padding: 8px 10px; text-decoration: none;
+      color: #00e5ff; font-weight: 700; border-radius: 10px;
+    }
+
+    .dropdown a:hover { background: rgba(214, 214, 214, 0); }
+    .btn-menu.open .dropdown { display: block; }
+
+    /* التوهج */
+    @keyframes pulse2s {
+      0%, 100% {
+        box-shadow: 0 0 10px rgba(0,195,255,.4), 0 0 25px rgba(0,235,255,.2);
+      }
+      50% {
+        box-shadow: 0 0 22px rgba(255, 68, 0, 0.616), 0 0 50px rgba(255, 119, 0, 0);
+      }
+    }
+
+    /* زر رجوع للأعلى */
+    #scrollTopBtn {
+      position: fixed; bottom: 20px; left: 20px; z-index: 99;
+      background: rgba(0,200,255,0.18);
+      border: 1px solid #00cfff;
+      color: #00e5ff;
+      padding: 12px 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      display: none;
+      backdrop-filter: blur(8px);
+      transition: transform .2s ease, box-shadow .2s ease;
+      box-shadow: 0 0 12px rgba(0,200,255,.5);
+      animation: pulse2s 3s ease-in-out infinite;
+    }
+
+    #scrollTopBtn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 24px rgba(255,120,0,1);
+    }
+        /* زر رجوع للأعلى */
+    #scrollTopBtn {
+      ...
+    }
+
+    /* ✨ توهج متعدّد الألوان للشعار */
+    @keyframes multi-glow {
+      0%   { filter: drop-shadow(0 0 6px red); }
+      25%  { filter: drop-shadow(0 0 6px orange); }
+      50%  { filter: drop-shadow(0 0 6px yellow); }
+      75%  { filter: drop-shadow(0 0 6px cyan); }
+      100% { filter: drop-shadow(0 0 6px red); }
+    }
+
+    .logo-glow {
+      animation: multi-glow 3s infinite;
+      transition: filter 0.3s ease-in-out;
+    }
+</style>
+
+  </style>
+</head>
+<body>
+
+  <div class="veil"></div>
+
+  <main class="wrap">
+    <section class="card">
+   <h1 style="font-family: 'Baloo Bhaijaan 2', Tajawal, sans-serif; color: #00f5ff; text-shadow: 0 0 12px cyan; font-size: 48px;">
+  <span class="rainbow-emoji">🎮</span>
+  <span style="font-size: 32px;">مرحباً بك</span>
+  <span class="rainbow-emoji">🎮</span>
+</h1>
+</h1>
+<img src="icons/logo.png" alt="حسين للألعاب الإلكترونية" class="logo-glow" style="width: 300px; max-width: 90%; height: auto;">
+
+      <p class="sub">متخصصة بكل ما يخص عالم الألعاب الإلكترونية – بيع وشراء أجهزة، إكسسوارات، كراسي ألعاب، بطاقات شحن، وخدمات سوفتوير.</p>
+
+      <p class="addr">
+        النجف الأشرف — شارع غدير الفرات، مقابل كوفي دردشة.
+        <a href="https://goo.gl/maps/5wGJ6tSo3s6SuHNU9" target="_blank">
+          <img src="icons/map.png" class="glow-icon" alt="عرض على الخريطة" style="width: 24px; vertical-align: middle;">
+        </a>
+      </p>
+
+      <div class="phones">
+        <a class="pill" href="tel:+9647708222300"><img src="icons/asiacell.png"></a>
+        <a class="pill" href="tel:+9647836900133"><img src="icons/zain.png"></a>
+      </div>
+
+    
+       <a class="btn gini-btn" style="color: rgb(255, 0, 0);" href="https://app.gini.iq/deeplink/hussein_gaming" target="_blank">
+  <span class="icon"><img src="icons/gini.png"></span> أقساط
+</a>
+
+
+
+        <div class="btn btn-menu" id="whatsappMenu">
+          <span class="icon"><img src="icons/whatsapp.png"></span> 
+          <div class="dropdown">
+            <a href="https://wa.me/9647708222300" target="_blank"> - آسيا سيل</a>
+            <a href="https://wa.me/9647836900133" target="_blank"> - زين</a>
+          </div>
+        </div>
+
+        <a class="btn" href="https://instagram.com/XPSP54" target="_blank"><span class="icon"><img src="icons/instagram.png"></span> </a>
+        <a class="btn" href="https://www.tiktok.com/@ps53507" target="_blank"><span class="icon"><img src="icons/tiktok.png"></span> </a>
+        <a class="btn" href="https://www.facebook.com/share/1JQFJiBscM/" target="_blank"><span class="icon"><img src="icons/facebook.png"></span> </a>
+        <a class="btn" href="https://t.me/ALSF48" target="_blank"><span class="icon"><img src="icons/telegram.png"></span> </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="y"></span> حسين للألعاب الإلكترونية</footer>
+  <button id="scrollTopBtn" title="رجوع للأعلى">⬆</button>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const menu = document.getElementById('whatsappMenu');
+    function toggleMenu(open) {
+      if (typeof open === 'boolean') menu.classList.toggle('open', open);
+      else menu.classList.toggle('open');
+    }
+    menu.addEventListener('click', (e) => {
+      if (e.target.tagName.toLowerCase() === 'a') return;
+      toggleMenu();
+    });
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target)) toggleMenu(false);
+    });
+
+    // زر رجوع للأعلى
+    const btn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      btn.style.display = (window.scrollY > 200) ? 'block' : 'none';
+    });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+
+</body>
+</html>
