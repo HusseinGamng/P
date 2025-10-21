@@ -8,6 +8,7 @@
   <meta name="description" content="صفحة ترحيب – حسين للألعاب الإلكترونية" />
 
   <style>
+    
     @keyframes emoji-rgb-glow {
   0%   { filter: drop-shadow(0 0 6px red); }
   25%  { filter: drop-shadow(0 0 6px orange); }
@@ -148,7 +149,7 @@
 
     .dropdown {
       position: absolute; top: 110%; inset-inline-end: 0;
-      background: rgba(0,20,30,.95);
+      background: rgb(0, 20, 30);
       border: 1px solid var(--border);
       border-radius: 12px; padding: 8px; min-width: 200px;
       display: none; backdrop-filter: blur(6px);
@@ -211,6 +212,10 @@
       animation: multi-glow 3s infinite;
       transition: filter 0.3s ease-in-out;
     }
+    .addr {
+    margin-top: 80px !important;
+  }
+  /* تصغير قائمة واتساب (آسيا سيل / زين) 
 </style>
 
   </style>
@@ -221,11 +226,13 @@
 
   <main class="wrap">
     <section class="card">
-   <h1 style="font-family: 'Baloo Bhaijaan 2', Tajawal, sans-serif; color: #00f5ff; text-shadow: 0 0 12px cyan; font-size: 48px;">
+      <h1 style="font-family: 'Baloo Bhaijaan 2', Tajawal, sans-serif; color: #00f5ff; text-shadow: 0 0 12px cyan; font-size: 48px; white-space: nowrap; display: inline-flex; align-items: center; gap: 10px; justify-content: center;">
   <span class="rainbow-emoji">🎮</span>
   <span style="font-size: 32px;">مرحباً بك</span>
   <span class="rainbow-emoji">🎮</span>
 </h1>
+   <h1 style="font-family: 'Baloo Bhaijaan 2', Tajawal, sans-serif; color: #00f5ff; text-shadow: 0 0 12px cyan; font-size: 48px;">
+  </h1>
 </h1>
 <img src="icons/logo.png" alt="حسين للألعاب الإلكترونية" class="logo-glow" style="width: 300px; max-width: 90%; height: auto;">
 
@@ -241,9 +248,6 @@
        <a class="btn gini-btn" style="color: rgb(255, 0, 0);" href="https://app.gini.iq/deeplink/hussein_gaming" target="_blank">
   <span class="icon"><img src="icons/gini.png"></span> أقساط
 </a>
-
-
-
         <div class="btn btn-menu" id="whatsappMenu">
           <span class="icon"><img src="icons/whatsapp.png"></span> 
           <div class="dropdown">
@@ -257,7 +261,8 @@
         <a class="btn" href="https://www.facebook.com/share/1JQFJiBscM/" target="_blank"><span class="icon"><img src="icons/facebook.png"></span> </a>
         <a class="btn" href="https://t.me/ALSF48" target="_blank"><span class="icon"><img src="icons/telegram.png"></span> </a>
       </div>
-      
+     <div class="veil"></div>
+     <div class="veil"></div> 
  </a>
       </p>
        </a>
